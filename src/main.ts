@@ -3,8 +3,10 @@ import { AppModule } from './app.module';
 import * as Sentry from '@sentry/node';
 import { nodeProfilingIntegration } from '@sentry/profiling-node';
 
+const DSN = '';
+
 Sentry.init({
-  dsn: 'https://5ecdb126a67c48d0962a5e271d9d1580@o4507261647716352.ingest.us.sentry.io/4507266968125440',
+  dsn: DSN,
   integrations: [nodeProfilingIntegration()],
   tracesSampleRate: 1.0,
   profilesSampleRate: 1.0,
